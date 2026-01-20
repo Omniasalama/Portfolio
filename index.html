@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eslam Khaled | Full-Stack & Data Developer</title>
+    <title>Engineering Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link
@@ -15,297 +15,332 @@
     <style>
       body {
         font-family: "Plus Jakarta Sans", sans-serif;
-        background-color: #080a10;
+        background-color: #020617;
         color: #f8fafc;
         scroll-behavior: smooth;
       }
-      .hero-glow {
-        background: radial-gradient(
-          circle at 50% 50%,
-          rgba(99, 102, 241, 0.15) 0%,
-          transparent 50%
-        );
-      }
-      .skill-card:hover {
+      .card-hover:hover {
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
         border-color: #6366f1;
-        background: rgba(99, 102, 241, 0.05);
-        transition: 0.3s;
+      }
+      #dynamic-name-nav,
+      #dynamic-name-hero {
+        transition: opacity 0.5s ease-in-out;
+      }
+      .fade-out {
+        opacity: 0;
+      }
+      .skill-tag {
+        background: rgba(99, 102, 241, 0.1);
+        border: 1px solid rgba(99, 102, 241, 0.2);
+        padding: 4px 10px;
+        border-radius: 8px;
+        font-size: 0.75rem;
+        color: #a5b4fc;
       }
     </style>
   </head>
   <body>
     <nav
-      class="sticky top-0 z-50 backdrop-blur-md border-b border-gray-800/50 bg-[#080a10]/80"
+      class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto sticky top-0 bg-[#020617]/90 backdrop-blur-md z-50"
     >
-      <div
-        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
-      >
-        <div class="text-xl font-bold tracking-tighter">
-          ESLAM<span class="text-indigo-500">.KHALED</span>
-        </div>
-        <div
-          class="hidden md:flex space-x-8 text-sm font-medium text-gray-400 uppercase tracking-widest"
+      <div class="text-2xl font-extrabold tracking-tighter text-white">
+        develop.me <span class="text-indigo-500">/</span>
+        <span id="dynamic-name-nav" class="text-indigo-400">Eslam</span>
+      </div>
+      <div class="hidden md:flex space-x-8 font-medium text-gray-400">
+        <a href="#projects" class="hover:text-white transition">Projects</a>
+        <a href="#skills" class="hover:text-white transition">Skills</a>
+        <a
+          href="mailto:eslam2002eslam@gmail.com"
+          class="px-5 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition"
+          >Contact</a
         >
-          <a href="#projects" class="hover:text-white">Portfolio</a>
-          <a href="#skills" class="hover:text-white">Expertise</a>
-          <a href="mailto:eslam2002eslam@gmail.com" class="text-indigo-400"
-            >Hire Me</a
-          >
-        </div>
       </div>
     </nav>
 
-    <header class="relative pt-20 pb-32 overflow-hidden hero-glow">
-      <div class="max-w-7xl mx-auto px-6 text-center">
-        <h1
-          class="text-5xl md:text-8xl font-extrabold tracking-tighter mb-8 leading-none"
-        >
-          DIGITAL
+    <section
+      class="bg-[#020617] max-w-7xl mx-auto px-8 py-24 grid md:grid-cols-2 gap-12 items-center"
+    >
+      <div>
+        <h1 class="text-6xl font-extrabold leading-tight mb-6">
+          Engineering
           <span
-            class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500"
-            >ARCHITECT</span
-          ><br />
-          & DATA SCIENTIST
+            class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+            >Intelligence</span
+          >
+          with <span id="dynamic-name-hero" class="text-white">Eslam</span>.
         </h1>
-        <p class="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl mb-10">
-          Business Information Systems graduate (GPA 3.3). Specialized in
-          building interactive web apps using
-          <span class="text-white">Angular</span> and automating complex
-          workflows with <span class="text-white">AI & Python</span>.
+        <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+          Full-Stack Developer and Systems Engineer. Specializing in
+          high-performance web systems, satellite ground stations, and AI-driven
+          medical solutions.
         </p>
-        <div class="flex flex-col md:flex-row justify-center gap-4">
+        <div class="flex space-x-4">
           <a
             href="#projects"
-            class="bg-white text-black px-10 py-4 rounded-full font-bold hover:scale-105 transition"
-            >Explore Projects</a
+            class="px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-gray-200 transition"
+            >View Works</a
           >
-          <div class="flex items-center gap-4 justify-center px-6">
-            <a
-              href="https://github.com/eslamkhaledd"
-              class="text-gray-400 hover:text-white"
-              ><i data-lucide="github"></i
-            ></a>
-            <a
-              href="https://linkedin.com/in/eslam-khaled"
-              class="text-gray-400 hover:text-white"
-              ><i data-lucide="linkedin"></i
-            ></a>
-          </div>
+          <a
+            href="https://github.com/eslamkhaledd"
+            class="px-8 py-4 border border-gray-700 font-bold rounded-xl hover:bg-gray-800 transition flex items-center"
+          >
+            <i data-lucide="github" class="mr-2"></i> GitHub
+          </a>
         </div>
       </div>
-    </header>
-
-    <section
-      id="skills"
-      class="py-24 max-w-7xl mx-auto px-6 border-t border-gray-900"
-    >
-      <div class="mb-16">
-        <h2
-          class="text-sm font-bold text-indigo-500 tracking-[0.2em] uppercase mb-4"
-        >
-          Technical Stack
-        </h2>
-        <p class="text-3xl font-bold">Skills & Tools</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="relative">
         <div
-          class="skill-card p-8 rounded-3xl border border-gray-800 bg-gray-900/20"
-        >
-          <div
-            class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-6"
-          >
-            <i data-lucide="layout" class="text-indigo-500"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-4">Front-End Development</h3>
-          <ul class="text-gray-400 space-y-2 text-sm">
-            <li>Core: HTML5, CSS3, JavaScript (ES6+), TypeScript</li>
-            <li>
-              Frameworks: <span class="text-white">Angular</span>, Bootstrap,
-              Tailwind CSS
-            </li>
-            <li>UI/UX: Responsive Design, Chrome DevTools, Swiper.js</li>
-          </ul>
-        </div>
-
+          class="absolute -inset-4 bg-indigo-500/20 blur-3xl rounded-full"
+        ></div>
         <div
-          class="skill-card p-8 rounded-3xl border border-gray-800 bg-gray-900/20"
+          class="relative bg-slate-900 border border-slate-800 p-8 rounded-3xl shadow-2xl"
         >
-          <div
-            class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6"
-          >
-            <i data-lucide="brain-circuit" class="text-purple-500"></i>
+          <div class="flex space-x-2 mb-6 text-indigo-300">
+            <i data-lucide="code-2"></i>
+            <span class="text-sm font-mono tracking-widest">SYSTEM_LOG</span>
           </div>
-          <h3 class="text-xl font-bold mb-4">AI & Data Science</h3>
-          <ul class="text-gray-400 space-y-2 text-sm">
-            <li>Python: Pandas, NumPy, Scikit-Learn, Matplotlib</li>
-            <li>ML: Regression, CNN, Random Forest, SVM</li>
-            <li>AI: ChatGPT API, RAG Principles, NLP (NLTK)</li>
-          </ul>
-        </div>
-
-        <div
-          class="skill-card p-8 rounded-3xl border border-gray-800 bg-gray-900/20"
-        >
-          <div
-            class="w-12 h-12 bg-pink-500/10 rounded-xl flex items-center justify-center mb-6"
-          >
-            <i data-lucide="database" class="text-pink-500"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-4">Analysis & Backend</h3>
-          <ul class="text-gray-400 space-y-2 text-sm">
-            <li>Database: SQL, MySQL, Power BI Dashboards</li>
-            <li>Automation: Selenium, BeautifulSoup (Web Scraping)</li>
-            <li>Tools: Git, GitHub, VS Code, Cursor</li>
-          </ul>
+          <code class="text-indigo-300 text-sm md:text-base leading-loose">
+            <span class="text-purple-400">const</span> activeDev =
+            <span class="text-yellow-200" id="code-name">"Eslam"</span>;<br />
+            <span class="text-purple-400">const</span> status =
+            <span class="text-yellow-200">"Building the future"</span>;<br />
+            <span class="text-purple-400">await</span> deploy({ user: activeDev,
+            projects: 6 });
+          </code>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="py-24 bg-[#0a0c14]">
-      <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-16 text-center">Featured Projects</h2>
-
-        <div class="grid md:grid-cols-2 gap-10">
-          <div
-            class="group relative overflow-hidden rounded-3xl bg-gray-900 border border-gray-800"
-          >
-            <div class="p-8">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-2xl font-bold">DevFolio Portfolio</h3>
-                <a
-                  href="https://omniasalama.github.io/DevFolio"
-                  class="text-indigo-400 hover:underline"
-                  ><i data-lucide="external-link"></i
-                ></a>
-              </div>
-              <p class="text-gray-400 mb-6">
-                A high-performance personal portfolio featuring interactive
-                modals and category-based filtering for projects.
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span class="bg-gray-800 px-3 py-1 rounded-full text-xs"
-                  >Bootstrap</span
-                >
-                <span class="bg-gray-800 px-3 py-1 rounded-full text-xs"
-                  >JavaScript</span
-                >
-                <span class="bg-gray-800 px-3 py-1 rounded-full text-xs"
-                  >Swiper.js</span
-                >
-              </div>
+    <section id="skills" class="bg-[#0f172a] py-24 border-y border-slate-800">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-3xl font-bold mb-12">Technical Expertise</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl">
+            <div class="flex items-center gap-3 mb-6 text-indigo-400">
+              <i data-lucide="layout"></i>
+              <h3 class="font-bold text-white">Front-End</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">Angular</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Tailwind CSS</span>
             </div>
           </div>
 
-          <div
-            class="group relative overflow-hidden rounded-3xl bg-gray-900 border border-gray-800"
-          >
-            <div class="p-8">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-2xl font-bold">AI Content Automation</h3>
-                <span class="text-indigo-400"><i data-lucide="bot"></i></span>
-              </div>
-              <p class="text-gray-400 mb-6">
-                Developed for Zedny Educational Service. Reduced production time
-                by 50% using ChatGPT API & RAG principles.
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span class="bg-gray-800 px-3 py-1 rounded-full text-xs"
-                  >Python</span
-                >
-                <span class="bg-gray-800 px-3 py-1 rounded-full text-xs"
-                  >Fast-Whisper</span
-                >
-                <span class="bg-gray-800 px-3 py-1 rounded-full text-xs"
-                  >NLP</span
-                >
-              </div>
+          <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl">
+            <div class="flex items-center gap-3 mb-6 text-emerald-400">
+              <i data-lucide="server"></i>
+              <h3 class="font-bold text-white">Back-End</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">Django</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">PyQt6</span>
+              <span class="skill-tag">REST APIs</span>
             </div>
           </div>
 
-          <div
-            class="group relative overflow-hidden rounded-3xl bg-gray-900 border border-gray-800"
-          >
-            <div class="p-8">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-2xl font-bold">Weather Forecast API</h3>
-                <a
-                  href="https://omniasalama.github.io/Weather-Api"
-                  class="text-indigo-400"
-                  ><i data-lucide="cloud-sun"></i
-                ></a>
-              </div>
-              <p class="text-gray-400 mb-6">
-                Real-time weather dashboard with location search, temperature
-                icons, and dynamic forecast data integration.
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span class="bg-gray-800 px-3 py-1 rounded-full text-xs"
-                  >HTML5</span
-                >
-                <span class="bg-gray-800 px-3 py-1 rounded-full text-xs"
-                  >WeatherAPI</span
-                >
-                <span class="bg-gray-800 px-3 py-1 rounded-full text-xs"
-                  >JSON</span
-                >
-              </div>
+          <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl">
+            <div class="flex items-center gap-3 mb-6 text-purple-400">
+              <i data-lucide="brain-circuit"></i>
+              <h3 class="font-bold text-white">AI & Data</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">Scikit-Learn</span>
+              <span class="skill-tag">XGBoost</span>
+              <span class="skill-tag">RAG</span>
             </div>
           </div>
 
-          <div
-            class="group relative overflow-hidden rounded-3xl bg-gray-900 border border-gray-800"
-          >
-            <div class="p-8">
-              <div class="flex justify-between items-start mb-4">
-                <h3 class="text-2xl font-bold">Fake News Detection</h3>
-                <span class="text-indigo-400"
-                  ><i data-lucide="shield-check"></i
-                ></span>
-              </div>
-              <p class="text-gray-400 mb-6">
-                NLP-based machine learning project using Scikit-Learn and NLTK
-                to classify and detect misinformation.
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span class="bg-gray-800 px-3 py-1 rounded-full text-xs"
-                  >Pandas</span
-                >
-                <span class="bg-gray-800 px-3 py-1 rounded-full text-xs"
-                  >SKlearn</span
-                >
-                <span class="bg-gray-800 px-3 py-1 rounded-full text-xs"
-                  >NLP</span
-                >
-              </div>
+          <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl">
+            <div class="flex items-center gap-3 mb-6 text-blue-400">
+              <i data-lucide="settings"></i>
+              <h3 class="font-bold text-white">Tools</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">Git / GitHub</span>
+              <span class="skill-tag">AX.25 Protocol</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Selenium</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="py-20 text-center">
-      <div class="max-w-xl mx-auto px-6">
-        <h2 class="text-4xl font-extrabold mb-6">
-          Let's build something data-driven.
-        </h2>
-        <p class="text-gray-400 mb-10">
-          Currently based in Giza, Egypt. Open to Junior Web Dev and Data
-          Analyst roles.
-        </p>
-        <a
-          href="mailto:eslam2002eslam@gmail.com"
-          class="text-2xl font-bold border-b-2 border-indigo-500 pb-2 hover:text-indigo-400 transition"
-        >
-          eslam2002eslam@gmail.com
-        </a>
-        <div class="mt-12 text-sm text-gray-600">
-          &copy; 2025 Eslam Khaled.<br> Built with Tailwind & Passion.
+    <section id="projects" class="bg-[#020617] py-24">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-3xl font-bold mb-12">Engineering Projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="card-hover bg-slate-900/50 border border-slate-800 rounded-3xl p-6 flex flex-col"
+          >
+            <i data-lucide="satellite" class="text-blue-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2 text-white">CubeSat Swift Act</h3>
+            <p class="text-gray-400 text-sm mb-4">
+              Ground station GUI with PyQt6 and AX.25 protocol implementation
+              for real-time satellite monitoring.
+            </p>
+            <div class="mt-auto flex gap-2">
+              <span
+                class="text-[10px] bg-indigo-950 text-indigo-300 px-2 py-1 rounded"
+                >PyQt6</span
+              ><span
+                class="text-[10px] bg-indigo-950 text-indigo-300 px-2 py-1 rounded"
+                >AX.25</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="card-hover bg-slate-900/50 border border-slate-800 rounded-3xl p-6 flex flex-col"
+          >
+            <i data-lucide="shield-plus" class="text-emerald-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2 text-white">Skin Wizard AI</h3>
+            <p class="text-gray-400 text-sm mb-4">
+              AI disease detection with Django backend, PostgreSQL, and JWT
+              secure authentication.
+            </p>
+            <div class="mt-auto flex gap-2">
+              <span
+                class="text-[10px] bg-emerald-950 text-emerald-300 px-2 py-1 rounded"
+                >Django</span
+              ><span
+                class="text-[10px] bg-emerald-950 text-emerald-300 px-2 py-1 rounded"
+                >AI</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="card-hover bg-slate-900/50 border border-slate-800 rounded-3xl p-6 flex flex-col"
+          >
+            <i data-lucide="cpu" class="text-purple-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Zedny AI Automation
+            </h3>
+            <p class="text-gray-400 text-sm mb-4">
+              RAG-driven automation reducing manual writing time by 50% using
+              ChatGPT API.
+            </p>
+            <div class="mt-auto flex gap-2">
+              <span
+                class="text-[10px] bg-purple-950 text-purple-300 px-2 py-1 rounded"
+                >Python</span
+              ><span
+                class="text-[10px] bg-purple-950 text-purple-300 px-2 py-1 rounded"
+                >RAG</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="card-hover bg-slate-900/50 border border-slate-800 rounded-3xl p-6 flex flex-col"
+          >
+            <i data-lucide="layout" class="text-indigo-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Interactive DevFolio
+            </h3>
+            <p class="text-gray-400 text-sm mb-4">
+              Modern portfolio with dynamic filtering, category modals, and
+              Swiper.js integration.
+            </p>
+            <div class="mt-auto flex gap-2">
+              <span
+                class="text-[10px] bg-slate-800 text-slate-300 px-2 py-1 rounded"
+                >JavaScript</span
+              ><span
+                class="text-[10px] bg-slate-800 text-slate-300 px-2 py-1 rounded"
+                >Bootstrap</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="card-hover bg-slate-900/50 border border-slate-800 rounded-3xl p-6 flex flex-col"
+          >
+            <i data-lucide="cloud-sun" class="text-cyan-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2 text-white">Weather Dashboard</h3>
+            <p class="text-gray-400 text-sm mb-4">
+              Real-time weather tracking for any city using WeatherAPI and
+              smooth JSON integration.
+            </p>
+            <div class="mt-auto flex gap-2">
+              <span
+                class="text-[10px] bg-slate-800 text-slate-300 px-2 py-1 rounded"
+                >API</span
+              ><span
+                class="text-[10px] bg-slate-800 text-slate-300 px-2 py-1 rounded"
+                >JSON</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="card-hover bg-slate-900/50 border border-slate-800 rounded-3xl p-6 flex flex-col"
+          >
+            <i data-lucide="shield-check" class="text-red-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2 text-white">NLP Fake News</h3>
+            <p class="text-gray-400 text-sm mb-4">
+              Machine learning classifier using Scikit-Learn to detect
+              misinformation in text data.
+            </p>
+            <div class="mt-auto flex gap-2">
+              <span
+                class="text-[10px] bg-red-950 text-red-300 px-2 py-1 rounded"
+                >Scikit-Learn</span
+              ><span
+                class="text-[10px] bg-red-950 text-red-300 px-2 py-1 rounded"
+                >NLP</span
+              >
+            </div>
+          </div>
         </div>
       </div>
+    </section>
+
+    <footer class="bg-[#020617] py-20 text-center border-t border-slate-800">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="#" class="text-gray-400 hover:text-white transition"
+          ><i data-lucide="linkedin"></i
+        ></a>
+        <a href="#" class="text-gray-400 hover:text-white transition"
+          ><i data-lucide="github"></i
+        ></a>
+      </div>
+      <p class="text-gray-500 text-sm tracking-widest uppercase">
+        The best of the best © 2026
+      </p>
     </footer>
 
     <script>
+      const names = ["Eslam", "Omnia", "Barbara", "Aly"];
+      let currentIndex = 0;
+
+      const navName = document.getElementById("dynamic-name-nav");
+      const heroName = document.getElementById("dynamic-name-hero");
+      const codeName = document.getElementById("code-name");
+
+      function rotateName() {
+        navName.classList.add("fade-out");
+        heroName.classList.add("fade-out");
+
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % names.length;
+          navName.innerText = names[currentIndex];
+          heroName.innerText = names[currentIndex];
+          codeName.innerText = `"${names[currentIndex]}"`;
+          navName.classList.remove("fade-out");
+          heroName.classList.remove("fade-out");
+        }, 500);
+      }
+
+      setInterval(rotateName, 3000);
       lucide.createIcons();
     </script>
   </body>
